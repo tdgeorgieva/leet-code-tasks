@@ -11,20 +11,10 @@ public class ContainsDuplicates {
     public static boolean containsDuplicate(int[] nums) {
 
         var set = new HashSet<>();
-        var map = new HashMap<>();
 
         for (int i = 0; i < nums.length; i++) {
-            if(map.containsKey(nums[i])) {
-                return true;
-            }
-
-            map.put(nums[i], 1);
+            set.add(nums[i]);
         }
-
-
-//        for (int i = 0; i < nums.length; i++) {
-//            set.add(nums[i]);
-//        }
 
         return false;
     }
